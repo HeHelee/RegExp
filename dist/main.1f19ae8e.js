@@ -118,12 +118,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-var str = "\n010-1234-5678\nthesecon@gmail.com\nhttps://www.omdbapi.com/?apikey=7035c60c&s=frozen\nThe quick brown fox jumps over the lazy dog.\nabbcccdddd\n";
+var str = "\n010-1234-5678.\nthesecon@gmail.com\nhttps://www.omdbapi.com/?apikey=7035c60c&s=frozen\nThe quick brown fox jumps over the lazy dog.\nabbcccdddd\n";
 
 //const regexp = new RegExp('the','gi')
-var regexp = /fox/gi;
-str = str.replace(regexp, 'AAA');
-console.log(str);
+
+console.log(str.match(/\.$/gim));
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
